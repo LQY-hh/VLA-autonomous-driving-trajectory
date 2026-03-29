@@ -1,0 +1,101 @@
+# 系统配置文件
+
+# 预处理配置
+preprocess:
+  input_size: [640, 640]
+  normalize: true
+  mean: [0.485, 0.456, 0.406]
+  std: [0.229, 0.224, 0.225]
+  color_space: RGB
+
+# 目标检测配置
+detection:
+  conf_threshold: 0.5
+  iou_threshold: 0.45
+  device: cpu
+  classes: null
+
+# BEV生成配置
+bev:
+  camera_matrix:
+    - [900, 0, 640]
+    - [0, 900, 360]
+    - [0, 0, 1]
+  rotation_matrix:
+    - [1, 0, 0]
+    - [0, 1, 0]
+    - [0, 0, 1]
+  translation_vector: [0, 0, 1.5]
+  bev_size: [500, 500]
+  bev_resolution: 0.1
+  bev_range: 25
+  roi:
+    x_min: 0.2
+    x_max: 0.8
+    y_min: 0.5
+    y_max: 1.0
+
+# 轨迹预测配置
+trajectory:
+  hidden_dim: 256
+  num_heads: 8
+  num_encoder_layers: 3
+  num_decoder_layers: 3
+  dropout: 0.1
+  history_len: 5
+  pred_len: 15
+  bev_size: [500, 500]
+  bev_channels: 1
+  num_modes: 3
+  device: cpu
+
+# 驾驶建议配置
+advice:
+  speed_threshold: 10.0
+  distance_threshold: 5.0
+  angle_threshold: 0.3
+  driving_style: normal
+
+# 可视化配置
+visualization:
+  trajectory_color: [0, 255, 0]
+  heading_color: [0, 0, 255]
+  point_size: 3
+  line_width: 2
+  heading_length: 20
+  font_scale: 0.5
+  font_color: [255, 255, 255]
+  font_thickness: 1
+  text_color: [255, 255, 255]
+  bg_color: [0, 0, 0]
+  border_color: [0, 255, 0]
+  font_scale: 0.7
+  font_thickness: 2
+  border_thickness: 2
+  padding: 10
+  margin: 20
+  line_spacing: 15
+
+# 视频生成配置
+video:
+  fps: 5
+  video_codec: mp4v
+  video_extension: mp4
+  width: 1280
+  height: 720
+  text_color: [255, 255, 255]
+  text_font: 0
+  text_scale: 0.7
+  text_thickness: 2
+  text_position: [10, 30]
+
+# 技能配置
+skills:
+  enabled: true
+  skills_dir: "skills"
+  enabled_skills:
+    - "skill-creator"
+    - "docx"
+    - "pdf"
+    - "pptx"
+    - "xlsx"

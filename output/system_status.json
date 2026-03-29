@@ -1,0 +1,14 @@
+{
+  "initialized": true,
+  "modules": {
+    "input": true,
+    "preprocess": true,
+    "detection": true,
+    "bev": true,
+    "trajectory": true,
+    "advice": true,
+    "visualization": true
+  },
+  "error_count": 0,
+  "success_count": 5
+}

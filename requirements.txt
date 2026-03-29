@@ -1,0 +1,23 @@
+# 基础依赖
+numpy==2.0.2
+pandas==2.3.3
+matplotlib==3.9.4
+opencv-python==4.13.0.92
+pyyaml==6.0.3
+tqdm==4.67.3
+Pillow==10.4.0
+
+# 深度学习框架
+torch==2.8.0
+torchaudio==2.8.0
+torchvision==0.23.0
+
+# 目标检测
+transformers==4.57.6
+ultralytics==8.4.24
+
+# 视频处理
+moviepy==2.2.1
+
+# 性能优化
+onnxruntime==1.19.2
