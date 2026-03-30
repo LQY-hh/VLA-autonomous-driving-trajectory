@@ -3,9 +3,6 @@
 ## 项目概述
 
 本项目实现了一个基于车载前视摄像头图像的自动驾驶轨迹预测系统，能够处理摄像头图像序列，预测车辆未来3-5秒的行驶轨迹（包含精确坐标和航向信息），并生成自然语言驾驶建议。
-<img width="1080" height="2340" alt="image" src="https://github.com/user-attachments/assets/2d761e79-8a7a-42cb-87ff-5439e3a0e803" />
-<img width="1080" height="2340" alt="image" src="https://github.com/user-attachments/assets/d78fe5ad-9936-4982-bbe2-6a5023a3d794" />
-
 
 ## 系统架构
 
